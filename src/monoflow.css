@@ -184,6 +184,7 @@ footer a {
 
   footer .portrait .company a {
     color: var(--footer-text-color);
+    padding: 0;
   }
 
   footer .portrait .github {
@@ -214,6 +215,7 @@ footer a {
 
   footer .landscape .company a {
     color: var(--footer-text-color);
+    padding: 0;
   }
 
   footer .landscape .github img {
