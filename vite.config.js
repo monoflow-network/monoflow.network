@@ -9,7 +9,7 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/index.html"),
+        statement: resolve(__dirname, "src/statement.html"),
         contacts: resolve(__dirname, "src/contacts.html"),
         values: resolve(__dirname, "src/values.html"),
       },
