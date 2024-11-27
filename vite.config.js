@@ -2,6 +2,16 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import { createHtmlPlugin } from "vite-plugin-html";
 
+// Use this for local development
+//
+// export default {
+//   root: "src",
+//   build: {
+//     outDir: "../dist",
+//     emptyOutDir: true,
+//   },
+// };
+
 export default defineConfig({
   root: "src",
   build: {
@@ -9,12 +19,12 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        statement: resolve(__dirname, "src/statement.html"),
+        index: resolve(__dirname, "src/index.html"),
         contacts: resolve(__dirname, "src/contacts.html"),
         values: resolve(__dirname, "src/values.html"),
       },
       output: {
-        chunkFileStore: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
