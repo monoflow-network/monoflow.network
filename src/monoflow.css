@@ -52,12 +52,15 @@ h2 {
 
 .content {
   flex: 1;
-  padding: 14rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
   color: #3e3d3d;
 }
 @media screen and (orientation: portrait) {
   .content {
-    padding: 7rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
   }
 }
 
@@ -74,6 +77,10 @@ h2 {
 }
 
 @media screen and (orientation: portrait) {
+  .statement .w-break {
+    display: none;
+  }
+
   .statement,
   .values {
     padding: 1.2rem;
@@ -180,6 +187,7 @@ footer a {
   footer .portrait .company {
     padding: 1.5rem;
     font-size: 12pt;
+    font-weight: 400;
   }
 
   footer .portrait .company a {
@@ -205,12 +213,17 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
     color: var(--footer-text-color);
   }
   footer .landscape .links {
     flex: 1;
     padding-left: 0.5rem;
+  }
+
+  footer .landscape .company {
+    font-size: 12pt;
+    font-weight: 400;
   }
 
   footer .landscape .company a {
